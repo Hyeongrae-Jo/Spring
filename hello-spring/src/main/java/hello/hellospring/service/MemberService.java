@@ -10,6 +10,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //Depandency injection(D.I)
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
@@ -18,6 +19,7 @@ public class MemberService {
      * 회원 가입
      */
     public Long join(Member member) {
+
         //같은 이름이 있는 중복 회원 X
         validateDuplicateMember(member);  //중복 회원 검증
 
@@ -38,6 +40,7 @@ public class MemberService {
     public List<Member> findMembers() {
         return memberRepository.findAll();
     }
+
 
     public Optional<Member> findOne(Long memberId) {
         return memberRepository.findById(memberId);
