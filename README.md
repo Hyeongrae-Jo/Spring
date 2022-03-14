@@ -1,2 +1,2 @@
-# Spring
- Spring web study
+# Spring study
+ Spring framework study
